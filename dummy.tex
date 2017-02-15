@@ -1,0 +1,58 @@
+\documentclass{article}
+
+\usepackage{Sweave}
+\begin{document}
+\input{dummy-concordance}
+
+I am now trying to create an artificial model for analyzing effects of price shocks on households. This is good for my planning and stuff. Thus, my model is as follows:
+\begin{equation}
+y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon
+\end{equation}
+\begin{Schunk}
+\begin{Soutput}
+Call:
+lm(formula = y ~ x1 + x2)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-41.481  -8.976   0.306   8.458  43.186 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 47.93775    1.60975   29.78   <2e-16 ***
+x1           0.39873    0.02952   13.51   <2e-16 ***
+x2          12.08728    0.16104   75.06   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 13.32 on 997 degrees of freedom
+Multiple R-squared:  0.8542,	Adjusted R-squared:  0.8539 
+F-statistic:  2921 on 2 and 997 DF,  p-value: < 2.2e-16
+\end{Soutput}
+\begin{Soutput}
+===============================================
+                        Dependent variable:    
+                    ---------------------------
+                                 y             
+-----------------------------------------------
+x1                           0.399***          
+                              (0.030)          
+                                               
+x2                           12.087***         
+                              (0.161)          
+                                               
+Constant                     47.938***         
+                              (1.610)          
+                                               
+-----------------------------------------------
+Observations                   1,000           
+R2                             0.854           
+Adjusted R2                    0.854           
+Residual Std. Error      13.316 (df = 997)     
+F Statistic         2,920.939*** (df = 2; 997) 
+===============================================
+Note:               *p<0.1; **p<0.05; ***p<0.01
+\end{Soutput}
+\end{Schunk}
+
+\end{document}
